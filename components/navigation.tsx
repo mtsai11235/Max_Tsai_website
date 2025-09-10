@@ -5,19 +5,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, X, Home, User, Briefcase, Code, Mail, ChevronDown, UserCircle } from "lucide-react"
-
-const navItems = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/about", label: "About Me", icon: UserCircle },
-  { href: "/resume", label: "Resume", icon: User },
-  { href: "/contact", label: "Contact", icon: Mail },
-]
-
-const projectItems = [
-  { href: "/portfolio/cad", label: "CAD Projects", icon: Briefcase },
-  { href: "/portfolio/programming", label: "Programming", icon: Code },
-]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -60,7 +49,7 @@ export function Navigation() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">P</span>
+                <span className="font-bold text-sm text-primary-foreground">P</span>
               </div>
               <span className="font-bold text-lg text-foreground">Portfolio</span>
             </Link>
@@ -134,12 +123,17 @@ export function Navigation() {
                   </div>
                 )}
               </div>
+
+              <ThemeToggle />
             </div>
 
             {/* Mobile Menu Button */}
-            <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </Button>
+            <div className="md:hidden flex items-center space-x-2">
+              <ThemeToggle />
+              <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -210,3 +204,15 @@ export function Navigation() {
     </>
   )
 }
+
+const navItems = [
+  { href: "/", label: "Home", icon: Home },
+  { href: "/about", label: "About Me", icon: UserCircle },
+  { href: "/resume", label: "Resume", icon: User },
+  { href: "/contact", label: "Contact", icon: Mail },
+]
+
+const projectItems = [
+  { href: "/portfolio/cad", label: "CAD Projects", icon: Briefcase },
+  { href: "/portfolio/programming", label: "Programming", icon: Code },
+]
