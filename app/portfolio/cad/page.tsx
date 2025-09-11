@@ -42,12 +42,8 @@ const cadProjects: CADProject[] = [
     tools: ["Prusa Slicer"],
     date: "2025-10",
     image: "/Bottle_opener_thumbnail.jpg",
-    detailedDescription: [
-      "This project involved designing a sleek and ergonomic housing for a next-generation smart device that addresses both aesthetic appeal and thermal management challenges. The design process began with extensive user research and ergonomic studies to ensure the device would be comfortable to hold for extended periods.",
-      "Material selection was critical to balance durability, weight, and thermal properties. After evaluating several options, we selected a composite material that offers excellent heat dissipation while maintaining structural integrity during impact tests. The housing features strategically placed ventilation channels that maximize airflow without compromising the device's sleek appearance.",
-      "The manufacturing process was carefully considered from the early design stages. We worked closely with production engineers to ensure that the complex geometries could be efficiently manufactured at scale while maintaining tight tolerances. This collaboration resulted in several innovative solutions that reduced production costs without sacrificing quality.",
-      "Environmental sustainability was another key consideration in this project. The housing is designed for easy disassembly and recycling at end-of-life, with clearly marked material types and minimal use of adhesives. We also optimized the design to reduce material waste during manufacturing."
-    ],
+    detailedDescription:
+      "This print is an ergonomic bottle opener for people with arthritis or other hand dexterity issues. The original design comes from Makers Making Change, a Neil Squire non-profit program to empower people with disabilities, and has a few different sized models. Overall, the documentation was quite clear and thorough, detailing the different sizes of bottles that are compatible with the different sizes of bottle openers. Furthermore, they also provide documents showing how to use the bottle opener, how much the expected cost is to print, and even a printable document to reference the size of cap each bottle opener can be used on. Overall, the design was simple and effective and the documentation was well written and thought-out.",
     features: ["Ergonomic grip", "Easy to use", "Printable in one piece"],
     challenges: [],
     outcomes: [],
@@ -68,7 +64,7 @@ const cadProjects: CADProject[] = [
     date: "2025-10",
     image: "/Torture_toaster_thumbnail.jpg",
     detailedDescription:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "For this project, I tried printing a 3D torture toaster file from Clockword 3D in order to test the limitations of the Prusa Mini+ printer. As this was a torture test, I purposefully did not include any supports, printing the model as is. From the beginning, the print began to fail do to low bed adhesion. This can happen when there’s too little surface area of the print against the printing bed. This happened to me on a later print as well and I’ve come to learn a few techniques to address it, but overall this suggests that, when designing a 3D model for printing, you have to consider the limitations of the printing machine and account for the surface area against the bed, overhangs, and other factors that may compromise the print. Whether it means rotating the orientation of the print or re-evaluating the design itself, it’s important to consider the model’s printability without relying immediately on supports and a skirt/brim.",
     features: ["Tests Bed Adhesion", "Tests Elephant footing", "Tests Stringing"],
     challenges: [],
     outcomes: [],
